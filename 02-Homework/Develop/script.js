@@ -27,8 +27,24 @@ function generatePassword() {
   var passLength = prompt("Enter a password length (8 chars or more).");
   var includeLowerCase = confirm("Want to include lowercase chars?");
   var includeUpperCase = confirm("Want to include uppercase chars?");
-  var includeNumericChars = confirm("Want to include numbers?");
-  var specialChars = confirm("Want to include special characters?");
+  var includeNumeric = confirm("Want to include numbers?");
+  var includeSpecial = confirm("Want to include special characters?");
+
+  if (includeLowerCase == true) {
+    charPool.concat(lowerCase);
+  }
+
+  if (includeUpperCase == true) {
+    charPool.concat(upperCase);
+  }
+
+  if (includeNumeric == true) {
+    charPool.concat(numeric);
+  }
+
+  if (includeSpecial == true) {
+    charPool.concat(special);
+  }
 
   console.log(lowerCase);
   console.log(upperCase);
