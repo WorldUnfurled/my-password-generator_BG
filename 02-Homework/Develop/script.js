@@ -32,6 +32,11 @@ function generatePassword() {
 
   var allChars = [includeLowerCase, includeUpperCase, includeNumeric, includeSpecial];
 
+  if (passLength < 8 || passLength > 128) {
+    alert("Enter a length more than 8 characters but less than 128.");
+    return generatePassword();
+  }
+
   for (i = 0; i < allChars.length; i++) {
     if (allChars[i] === true) {
       charPool = charPool.concat(allArrays[i]);
