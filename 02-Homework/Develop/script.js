@@ -13,60 +13,47 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-generatePassword();
-
 function generatePassword() {
   var passKey = "";
   var charPool = [];
 
-  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
-  var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var numeric = '1234567890';
-  var special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+  var lowerCase = ['a','b','c','d','e','f','g','h','i','j', 'k','l','m','n','o','p','q','r', 's','t','u','v','w','x','y','z'];
+  var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+  var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  var special = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'];
 
-  var lowerCaseArray = lowerCase.split("");
-  var upperCaseArray = lowerCase.split("");
-  var numericArray = lowerCase.split("");
-  var specialArray = lowerCase.split("");
-
-  console.log(lowerCase);
-  console.log(upperCase);
-  console.log(numeric);
-  console.log(special);
-
-  var passLength = prompt("Enter a password length (8 chars or more).");
+  var passLength = parseInt(prompt("Enter a password length (8 chars or more)."), 10);
   var includeLowerCase = confirm("Want to include lowercase chars?");
   var includeUpperCase = confirm("Want to include uppercase chars?");
   var includeNumeric = confirm("Want to include numbers?");
   var includeSpecial = confirm("Want to include special characters?");
 
-  console.log(includeLowerCase);
-  console.log(includeUpperCase);
-  console.log(includeNumeric);
-  console.log(includeSpecial);
+  if (includeLowerCase === true) {
+    charPool = charPool.concat(lowerCase);
+  } 
+  
+  console.log(charPool);
 
-  if (includeLowerCase == true) {
-    var lowerChars = charPool.concat(lowerCaseArray);
+  if (includeUpperCase === true) {
+    charPool = charPool.concat(upperCase);
   }
 
-  if (includeUpperCase == true) {
-    var upperChars = charPool.concat(upperCaseArray);
+  console.log(charPool);
+
+  if (includeNumeric === true) {
+    charPool = charPool.concat(numeric);
   }
 
-  if (includeNumeric == true) {
-    var numericChars = charPool.concat(numericArray);
+  console.log(charPool);
+
+  if (includeSpecial === true) {
+    charPool = charPool.concat(special);
   }
 
-  if (includeSpecial == true) {
-    var specialChars = charPool.concat(specialArray);
-  }
+  console.log(charPool);
 
-  acceptableCharPool = [...lowerChars, ...upperChars, ...numericChars, ...specialChars];
-
-  console.log(acceptableCharPool);
-
-  for (var i = 0; i = passLength; i++) {
-    passKey += charPool[Math.floor(Math.random() * acceptableCharPool.length)];
+  for (var i = 0; i < passLength; i++) {
+    passKey += charPool[Math.floor(Math.random() * charPool.length)];
   }
 
   console.log(passKey);
