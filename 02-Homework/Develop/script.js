@@ -24,11 +24,21 @@ function generatePassword() {
   var numeric = '1234567890';
   var special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
+  console.log(lowerCase);
+  console.log(upperCase);
+  console.log(numeric);
+  console.log(special);
+
   var passLength = prompt("Enter a password length (8 chars or more).");
   var includeLowerCase = confirm("Want to include lowercase chars?");
   var includeUpperCase = confirm("Want to include uppercase chars?");
   var includeNumeric = confirm("Want to include numbers?");
   var includeSpecial = confirm("Want to include special characters?");
+
+  console.log(includeLowerCase);
+  console.log(includeUpperCase);
+  console.log(includeNumeric);
+  console.log(includeSpecial);
 
   if (includeLowerCase == true) {
     charPool.concat(lowerCase);
@@ -46,10 +56,11 @@ function generatePassword() {
     charPool.concat(special);
   }
 
-  console.log(lowerCase);
-  console.log(upperCase);
-  console.log(numeric);
-  console.log(special);
+  // Added console logs for confirmations to check status (T/F)
+
+  for (var i = 0; i = passLength; i++) {
+    passKey += charPool[Math.floor(Math.random() * charPool.length)];
+  }
 
   return passKey;
 }
