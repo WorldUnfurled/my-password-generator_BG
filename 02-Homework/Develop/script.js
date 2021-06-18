@@ -24,6 +24,12 @@ function generatePassword() {
   var numeric = '1234567890';
   var special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
+  var passLength = prompt("Enter a password length (8 chars or more).");
+  var includeLowerCase = confirm("Want to include lowercase chars?");
+  var includeUpperCase = confirm("Want to include uppercase chars?");
+  var includeNumericChars = confirm("Want to include numbers?");
+  var specialChars = confirm("Want to include special characters?");
+
   console.log(lowerCase);
   console.log(upperCase);
   console.log(numeric);
