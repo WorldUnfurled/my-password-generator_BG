@@ -40,30 +40,6 @@ function generatePassword() {
     }
   }
 
-  // if (includeLowerCase === true) {
-  //   charPool = charPool.concat(lowerCase);
-  // } else {
-  //   console.log(':)');
-  // }
-
-  // if (includeUpperCase === true) {
-  //   charPool = charPool.concat(upperCase);
-  // } else {
-  //   console.log(':)');
-  // }
-
-  // if (includeNumeric === true) {
-  //   charPool = charPool.concat(numeric);
-  // } else {
-  //   console.log(':)');
-  // }
-
-  // if (includeSpecial === true) {
-  //   charPool = charPool.concat(special);
-  // } else {
-  //   console.log(':)');
-  // }
-
   for (var i = 0; i < passLength; i++) {
     passKey += charPool[Math.floor(Math.random() * charPool.length)];
   }
