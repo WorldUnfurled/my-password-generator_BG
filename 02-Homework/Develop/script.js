@@ -22,7 +22,7 @@ function generatePassword() {
   var numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   var special = [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', '^', '_', '`', '{', '|', '}', '~'];
 
-  allArrays = [lowerCase, upperCase, numeric, special];
+  var allArrays = [lowerCase, upperCase, numeric, special];
 
   var passLength = parseInt(prompt("Enter a password length (8 chars or more)."), 10);
   var includeLowerCase = confirm("Want to include lowercase chars?");
@@ -38,15 +38,17 @@ function generatePassword() {
   }
 
   for (i = 0; i < allChars.length; i++) {
-    if (allChars[i] === true) {
+    if (allChars[i]) {
       charPool = charPool.concat(allArrays[i]);
-    } else {
-      console.log(':)');
     }
   }
 
   for (var i = 0; i < passLength; i++) {
-    passKey += charPool[Math.floor(Math.random() * charPool.length)];
+    if (charPool.length > 0) {
+      passKey += charPool[Math.floor(Math.random() * charPool.length)];
+    } else {
+      passKey = "Select some attributes for your password!";
+    }
   }
 
   console.log(passKey);
