@@ -13,9 +13,21 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+generatePassword();
+
 function generatePassword() {
   var passKey = "";
   var charPool = [];
+
+  var lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+  var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var numeric = '1234567890';
+  var special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+  console.log(lowerCase);
+  console.log(upperCase);
+  console.log(numeric);
+  console.log(special);
 
   return passKey;
 }
