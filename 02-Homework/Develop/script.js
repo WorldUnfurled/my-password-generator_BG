@@ -24,6 +24,11 @@ function generatePassword() {
   var numeric = '1234567890';
   var special = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
 
+  var lowerCaseArray = lowerCase.split("");
+  var upperCaseArray = lowerCase.split("");
+  var numericArray = lowerCase.split("");
+  var specialArray = lowerCase.split("");
+
   console.log(lowerCase);
   console.log(upperCase);
   console.log(numeric);
@@ -41,24 +46,24 @@ function generatePassword() {
   console.log(includeSpecial);
 
   if (includeLowerCase == true) {
-    var lowerChars = charPool.concat(lowerCase);
+    var lowerChars = charPool.concat(lowerCaseArray);
   }
 
   if (includeUpperCase == true) {
-    var upperChars = charPool.concat(upperCase);
+    var upperChars = charPool.concat(upperCaseArray);
   }
 
   if (includeNumeric == true) {
-    var numericChars = charPool.concat(numeric);
+    var numericChars = charPool.concat(numericArray);
   }
 
   if (includeSpecial == true) {
-    var specialChars = charPool.concat(special);
+    var specialChars = charPool.concat(specialArray);
   }
 
   acceptableCharPool = [...lowerChars, ...upperChars, ...numericChars, ...specialChars];
 
-  console.log(acceptableCharPool)
+  console.log(acceptableCharPool);
 
   for (var i = 0; i = passLength; i++) {
     passKey += charPool[Math.floor(Math.random() * acceptableCharPool.length)];
