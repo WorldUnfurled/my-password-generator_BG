@@ -41,26 +41,30 @@ function generatePassword() {
   console.log(includeSpecial);
 
   if (includeLowerCase == true) {
-    charPool.concat(lowerCase);
+    var lowerChars = charPool.concat(lowerCase);
   }
 
   if (includeUpperCase == true) {
-    charPool.concat(upperCase);
+    var upperChars = charPool.concat(upperCase);
   }
 
   if (includeNumeric == true) {
-    charPool.concat(numeric);
+    var numericChars = charPool.concat(numeric);
   }
 
   if (includeSpecial == true) {
-    charPool.concat(special);
+    var specialChars = charPool.concat(special);
   }
 
-  // Added console logs for confirmations to check status (T/F)
+  acceptableCharPool = [...lowerChars, ...upperChars, ...numericChars, ...specialChars];
+
+  console.log(acceptableCharPool)
 
   for (var i = 0; i = passLength; i++) {
-    passKey += charPool[Math.floor(Math.random() * charPool.length)];
+    passKey += charPool[Math.floor(Math.random() * acceptableCharPool.length)];
   }
+
+  console.log(passKey);
 
   return passKey;
 }
