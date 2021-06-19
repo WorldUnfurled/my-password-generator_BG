@@ -61,8 +61,6 @@ function generatePassword() {
     i++;
   }
 
-  console.log(passKey);
-
   return passKey;
 }
 
