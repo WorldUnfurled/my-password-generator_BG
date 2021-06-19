@@ -37,11 +37,21 @@ function generatePassword() {
     return generatePassword();
   }
 
-  for (i = 0; i < allChars.length; i++) {
-    if (allChars[i]) {
-      charPool = charPool.concat(allArrays[i]);
-    }
+  var num = 0;
+
+  while (num < allChars.length) {
+    if (allChars[num]) {
+      charPool = charPool.concat(allArrays[num]);
+    };
+
+    num++;
   }
+
+  // for (i = 0; i < allChars.length; i++) {
+  //   if (allChars[i]) {
+  //     charPool = charPool.concat(allArrays[i]);
+  //   }
+  // }
 
   for (var i = 0; i < passLength; i++) {
     if (charPool.length > 0) {
