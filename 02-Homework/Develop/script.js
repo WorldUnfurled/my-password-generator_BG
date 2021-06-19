@@ -37,28 +37,40 @@ function generatePassword() {
     return generatePassword();
   }
 
-  var num = 0;
+  // var num = 0;
 
-  while (num < allChars.length) {
-    if (allChars[num]) {
-      charPool = charPool.concat(allArrays[num]);
+  // while (num < allChars.length) {
+  //   if (allChars[num]) {
+  //     charPool = charPool.concat(allArrays[num]);
+  //   };
+
+  //   num++;
+  // }
+  var i = 0;
+  while (i < allChars.length) {
+    if (allChars[i]) {
+      passKey += allArrays[i][Math.floor(Math.random() * allArrays[i].length)];
     };
 
-    num++;
+    i++;
   }
 
-  // for (i = 0; i < allChars.length; i++) {
-  //   if (allChars[i]) {
-  //     charPool = charPool.concat(allArrays[i]);
-  //   }
-  // }
+  for (var num = 0; num < allChars.length; num++) {
+    if (allChars[num]) {
+      charPool = charPool.concat(allArrays[num]);
+    }
+  }
 
-  for (var i = 0; i < passLength; i++) {
+  console.log(i);
+
+  while (i < passLength) {
     if (charPool.length > 0) {
       passKey += charPool[Math.floor(Math.random() * charPool.length)];
     } else {
       passKey = "Select some attributes for your password!";
-    }
+    };
+
+    i++;
   }
 
   console.log(passKey);
