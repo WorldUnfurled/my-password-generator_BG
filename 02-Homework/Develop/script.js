@@ -61,6 +61,8 @@ function generatePassword() {
     i++;
   }
 
-  return passKey;
+  var randoKey = randoSequence(passKey).join("");
+
+  return randoKey;
 }
 
