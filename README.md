@@ -28,4 +28,4 @@
 # E-SIGNATURE
 Brooks Gunn :)
 
-![screenshot](02-Homework\Assets\my_password_generator.png)
+![screenshot](Assets\my_password_generator.png)
