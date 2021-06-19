@@ -24,7 +24,8 @@
 * Randomizes unrandomized passKey using refined Fischer-yates shuffle from random.js
 * Returns shuffled key string
 # LINKS
-
+https://github.com/WorldUnfurled/my-password-generator_BG
+https://worldunfurled.github.io/my-password-generator_BG/
 # E-SIGNATURE
 Brooks Gunn :)
 
