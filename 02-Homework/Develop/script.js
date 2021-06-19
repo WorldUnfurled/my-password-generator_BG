@@ -55,7 +55,8 @@ function generatePassword() {
     if (charPool.length > 0) {
       passKey += charPool[Math.floor(Math.random() * charPool.length)];
     } else {
-      passKey = "Select some attributes for your password!";
+      alert("Choose at least one character type for your password.");
+      return generatePassword();
     };
 
     i++;
