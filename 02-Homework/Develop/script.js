@@ -7,7 +7,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
@@ -37,15 +36,6 @@ function generatePassword() {
     return generatePassword();
   }
 
-  // var num = 0;
-
-  // while (num < allChars.length) {
-  //   if (allChars[num]) {
-  //     charPool = charPool.concat(allArrays[num]);
-  //   };
-
-  //   num++;
-  // }
   var i = 0;
   while (i < allChars.length) {
     if (allChars[i]) {
@@ -61,8 +51,6 @@ function generatePassword() {
     }
   }
 
-  console.log(i);
-
   while (i < passLength) {
     if (charPool.length > 0) {
       passKey += charPool[Math.floor(Math.random() * charPool.length)];
@@ -77,13 +65,4 @@ function generatePassword() {
 
   return passKey;
 }
-
-//PROMPT 1: User choose password length longer than 8 chars but shorter than 128 chars
-
-//PROMPT 2: Lowercase chars?
-//PROMPT 3: Uppercase chars?
-//PROMPT 4: Numeric chars?
-//PROMPT 5: Special chars?
-
-// Write password to page
 
