@@ -1,12 +1,17 @@
-## my-password-generator-bg
+# my-password-generator-bg
 
-# HTML
+## HTML
+
 * Utilized HTML from Trilogy 03-JS Homework File
 * Added descriptive comments to make for easier reading
-* Added script tag for Rando js - a randomizer based on a refined Fisher-Yates shuffle 
-# CSS
+* Added script tag for Rando js - a randomizer based on a refined Fisher-Yates shuffle
+
+## CSS
+
 * Utilized CSS from Trilogy 03-JS Homework File
-# JS
+
+## JS
+
 * _writePassword()_
 * Saves the string produced by generatePassword to a variable - password; passwordText selects the "password" id element and its value is set to the string in password, displaying the string as text on the page
 * _generateBtn.addEventListener()_
@@ -23,10 +28,12 @@
 * While the iterator i is less than the chosen length of the password, if the pool of chosen characters has more than 0 elements concatenated to it, an unrandomized password will be continued if added to earlier and generated fully; the password takes takes random characters from the pool and i is iterated up by one; otherwise, the system will ask for the user to choose at least one character type for their password and recursively call the function
 * Randomizes unrandomized passKey using refined Fischer-yates shuffle from random.js
 * Returns shuffled key string
-# LINKS
-https://github.com/WorldUnfurled/my-password-generator_BG
-https://worldunfurled.github.io/my-password-generator_BG/
-# E-SIGNATURE
-Brooks Gunn :)
 
-![screenshot](Assets/my_password_generator.png)
+## LINKS
+
+* https://github.com/WorldUnfurled/my-password-generator_BG
+* https://worldunfurled.github.io/my-password-generator_BG/
+
+## E-SIGNATURE
+
+Brooks Gunn :)
