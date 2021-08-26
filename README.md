@@ -1,5 +1,7 @@
 # my-password-generator-bg
 
+Generates a secure password based on user selections.
+
 ## HTML
 
 * Utilized HTML from Trilogy 03-JS Homework File
@@ -37,3 +39,7 @@
 ## E-SIGNATURE
 
 Brooks Gunn :)
+
+![alert](https://user-images.githubusercontent.com/80599137/130892584-e69e4ca4-a5cb-49e7-8090-350a4f3a221e.PNG)
+![alert_num](https://user-images.githubusercontent.com/80599137/130892589-ffa857a3-8668-439e-ad82-b583266b584b.PNG)
+![password_generator_g](https://user-images.githubusercontent.com/80599137/130892594-8256db44-5bb3-4451-bf63-e816f75fe3bf.PNG)
